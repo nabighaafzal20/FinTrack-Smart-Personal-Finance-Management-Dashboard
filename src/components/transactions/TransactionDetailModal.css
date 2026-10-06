@@ -1,0 +1,44 @@
+.txn-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.txn-detail-header h3 { font-size: 16px; margin-bottom: 6px; }
+
+.txn-detail-amount {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  margin-bottom: 20px;
+}
+.txn-detail-amount.income { color: var(--income-color); }
+.txn-detail-amount.expense { color: var(--expense-color); }
+
+.txn-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.txn-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13.5px;
+}
+.txn-detail-row span:first-child { color: var(--text-muted); font-weight: 600; }
+.txn-detail-row span:last-child { font-weight: 700; text-align: right; }
+
+.txn-detail-receipt {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.txn-detail-receipt img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}

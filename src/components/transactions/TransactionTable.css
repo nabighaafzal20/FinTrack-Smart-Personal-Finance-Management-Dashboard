@@ -1,0 +1,96 @@
+.txn-table-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.txn-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.txn-table thead th {
+  text-align: left;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 700;
+  padding: 14px 18px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.txn-table tbody td {
+  padding: 14px 18px;
+  font-size: 13.5px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+.txn-table tbody tr:last-child td { border-bottom: none; }
+.txn-table tbody tr:hover { background: var(--surface-hover); }
+
+.txn-desc-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.recurring-mark {
+  margin-left: 6px;
+  color: var(--brand-500);
+  vertical-align: middle;
+}
+
+.txn-amount { font-weight: 800; }
+.txn-amount.income { color: var(--income-color); }
+.txn-amount.expense { color: var(--expense-color); }
+
+.txn-row-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+.txn-row-actions button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+.txn-row-actions button:hover { background: var(--bg-secondary); color: var(--text-primary); }
+.txn-row-actions button.danger:hover { background: var(--danger-100); color: var(--danger-500); }
+
+@media (max-width: 860px) {
+  .txn-table thead { display: none; }
+  .txn-table, .txn-table tbody, .txn-table tr, .txn-table td { display: block; width: 100%; }
+  .txn-table tr {
+    padding: 14px 16px;
+    border-bottom: 8px solid var(--bg);
+  }
+  .txn-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    padding: 6px 0;
+    text-align: right;
+  }
+  .txn-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .txn-desc-cell { flex-direction: row-reverse; }
+  .txn-row-actions { justify-content: flex-end; width: 100%; }
+}

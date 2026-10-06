@@ -1,0 +1,11 @@
+.ui-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.ui-card-padded { padding: 22px; }
+
+@media (max-width: 640px) {
+  .ui-card-padded { padding: 16px; }
+}

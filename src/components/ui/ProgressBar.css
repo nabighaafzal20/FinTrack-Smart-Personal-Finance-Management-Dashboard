@@ -1,0 +1,15 @@
+.progress-track {
+  width: 100%;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+.progress-success { background: var(--success-500); }
+.progress-warning { background: var(--warning-500); }
+.progress-danger { background: var(--danger-500); }
+.progress-brand { background: var(--brand-500); }
